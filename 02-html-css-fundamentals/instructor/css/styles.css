@@ -56,20 +56,29 @@ section > .hero {
 }
 
 /* Pseudo-selectors */
+
+/* When mouse is within the containing area of the element */
 #hero-unit:hover {
   border: 10px solid black;
 }
 
+/* When a link has been visited before */
 .link:visited {
   color: green;
   text-decoration: none;
   font-size: 50px;
 }
 
+/*  When clicking on a link (before you let go) */
 .link:active {
 
 }
 
+/*
+  Typically when an input is in focused state (cursor is inside of input field)
+  OR
+  When a link is being focused
+*/
 .link:focus {
 
 }
