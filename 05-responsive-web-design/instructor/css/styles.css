@@ -46,6 +46,79 @@ body {
 /* -------------------------------------------------- */
 /* BASE STYLES */
 /* -------------------------------------------------- */
+html {
+	font-size: 10px;
+
+	/* Make 1rem = 10px. */
+	font-size: 62.5%; /* 10px / 16px = 0.625 or 62.5% */
+}
+
+body {
+	background: #eee;
+}
+
+header {
+	text-align: center;
+}
+
+.brand-main,
+a {
+	color: purple;
+	font-family: sans-serif;
+}
+
+/* Hide content for mobile. */
+.brand-supporting,
+.intro {
+	display: none;
+}
+
+/* Make all of the images on the page 'flexible'. */
+img {
+	max-width: 100%;
+}
+
+/* Post styles */
+/* Set the `font-size` directly on the post. This establishes the value of 1em for the descendant elements (h2, h3, p). */
+.post {
+	font-size: 5vw; /* 20px / 400px = 0.05 OR 5vw */
+	background: white;
+	margin-bottom: 4rem; /* 40px / 10px = 4rem */;
+}
+
+.post h2 {
+	font-size: 2em; /* 10vw */
+}
+
+.post h3 {
+	font-size: 0.75em;
+}
+
+.post div {
+	padding: 2rem; /* 20px / 10px = 2rem */
+}
+
 /*
- Write *YOUR* styles here!
+	TABLET STYLES
+	- These will only take effect when the viewport width is 600px or above.
 */
+@media screen and ( min-width: 600px ) {
+	/* Make the post wrapper more narrow and horizontally centre it. */
+	.post-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	/* Allow 2x posts to appear side-by-side. */
+	.post {
+		width: 48%;
+		float: left;
+		font-size: 1.5rem;
+	}
+
+	/* Ensure there's some space between the left and right-hand posts. */
+	/* To achieve this, target every SECOND post and add left margin. */
+	.post:nth-child( 2n ) {
+		margin-left: 4%;
+	}
+}
