@@ -1,0 +1,21 @@
+Why OOP?
+
+1) Encapsulation
+  - Take a group of related ideas, and giving it a name
+  - Allows to classify concepts
+
+2) Information Hiding
+  - State is private
+  - State belongs to the object until it's exposed via a behaviour.
+  - Call behaviours to invoke them. "Passing a message."
+
+3) Abstraction
+  - Internals are irrelevant, don't need to know how it is implemented
+  - Just how it works -- the behaviours of an object
+
+
+
+Object    |  State                  | Behaviour
+----------+-------------------------+-------------
+Instance  |  Instance Variables (@) | Instance Method (def)
+????????  |  ???????? Variable      | ???????? Method
