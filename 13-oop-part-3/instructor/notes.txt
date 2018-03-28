@@ -1,0 +1,24 @@
+MUST HAVE
+As a user, I should be able to create a contact, so that I can store it for later use
+As a user, I should be able to store information of a contact
+As a user, I should be able to see a list of contacts, so that I can find/select one.
+As a user, I should be able to find a contact, so that I can make a phone call
+
+SHOULD HAVE
+As a user, I should be able to edit a contact
+As a user, I should be able to delete a contact, ...
+
+COULD HAVE
+As a user, I should be able to add a photo to a contact
+As a user, I should be able to sort my contact by name
+
+WONT HAVE
+As a user, I should be able to sync contacts with Facebook
+As a user, I should be able to share a contact by sending an sms to another person
+As a user, I should be able to search for a contact by first name or last_name
+As a user, I should be able to group contacts
+As a user, I should be able to delete more than one contact at a time
+As a user, I should be able to export a contact list
+As a user, I should be able to import a contact list
+As a user, I should be able to call a contact
+As a user, I should be able to text a contact
