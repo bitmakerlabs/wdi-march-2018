@@ -22,3 +22,10 @@ As a user, I should be able to export a contact list
 As a user, I should be able to import a contact list
 As a user, I should be able to call a contact
 As a user, I should be able to text a contact
+
+
+
+Objects   | State                 | Behaviour
+----------+-----------------------+------------------------------
+Class     | Class Variable (@@)   | Class Method (def self.blah)
+Instances | Instance Variable (@) | Instance Methods (def blah)

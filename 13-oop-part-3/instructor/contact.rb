@@ -20,7 +20,7 @@ class Contact
   def self.create(first_name, last_name, email, notes = 'N/A')
     new_contact = Contact.new(first_name, last_name, email, notes)
     new_contact.save
-    new_contact
+    #new_contact
   end
 
   def self.find(id)

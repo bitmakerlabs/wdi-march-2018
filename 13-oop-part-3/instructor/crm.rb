@@ -12,4 +12,4 @@ bruce.notes = 'Has some secrets'
 diana.notes = 'Cool gal'
 
 some_contact = Contact.find(1002)
-puts some_contact.notes
+puts some_contact.notes # --> "Has some secrets"
