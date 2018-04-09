@@ -31,14 +31,7 @@ get '/recipes' do
   erb :recipes
 end
 
-get '/recipes/1' do
-  erb :recipe_1
-end
-
-get '/recipes/2' do
-  erb :recipe_2
-end
-
-get '/recipes/3' do
-  erb :recipe_3
+get '/recipes/:id' do
+  @id = params[:id]
+  erb :recipe
 end
