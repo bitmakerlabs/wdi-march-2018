@@ -9,38 +9,86 @@
 <form class="new-film" action="/films" method="post">
   <div>
     <!-- input type: text -->
+    <label for="film-title">Title:</label>
+    <input id="film-title" type="text" name="title" value="" placeholder="e.g.Moonlight">
   </div>
 
   <div>
     <!-- input types: date / time / email / tel / url / color / range / number / search -->
+    <!-- <input type="date" name="name" value="">
+    <input type="time" name="name" value="">
+    <input type="email" name="name" value="">
+    <input type="tel" name="name" value="">
+    <input type="url" name="name" value="">
+    <input type="color" name="name" value="">
+    <input type="range" name="name" value="">
+    <input type="search" name="name" value="">
+    <input type="number" name="name" value=""> -->
   </div>
 
   <div>
     <!-- textarea -->
+    <label for="film-description">Description:</label>
+    <textarea name="description" id="film-description" placeholder="once upon a time..."></textarea>
   </div>
 
   <div>
   <!-- input radio -->
+
+  <fieldset>
+    <legend>Rating</legend>
+    <label for="rating-1">
+      <span> 1 star </span>
+      <input type="radio" id="rating-1" name="rating" value="1">
+    </label>
+
+    <label for="rating-2">
+      <span> 2 stars </span>
+      <input type="radio" id="rating-2" name="rating" value="2">
+    </label>
+
+    <label for="rating-3">
+      <span> 3 stars </span>
+      <input type="radio" id="rating-3" name="rating" value="3">
+    </label>
+  </fieldset>
+
   </div>
 
   <div>
   <!-- input checkbox -->
+    <label for="film-available">Available in library?</label>
+    <input type="checkbox" id="film-available" name="available" value="1">
   </div>
 
 
   <div>
     <!-- select / option -->
+    <label for="film-country">Country:</label>
+    <select name="country" id="film-country">
+      <option value="">Please select a country</option>
+      <option value="CA">Canada</option>
+      <option value="US">United States</option>
+      <option value="GB">United Kingdom</option>
+      <option value="JP">Japan</option>
+    </select>
   </div>
-
 
   <div>
     <!-- file -->
+    <!-- <input type="file" name=""> -->
   </div>
 
   <!-- hidden -->
+  <!-- <input type="hidden" name="loyalty-points-number" value="23209480234809328"> -->
 
   <div>
     <!-- input submit / button -->
+    <!-- <input type="submit" name="submit" value="Create Film!"> -->
+    <button type="submit">
+      <span>Create Film!</span>
+      <img src="http://placebear.com/100/100" alt="a bear">
+    </button>
   </div>
 
 </form>
