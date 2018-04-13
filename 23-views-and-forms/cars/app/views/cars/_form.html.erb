@@ -1,0 +1,19 @@
+
+<%= form_for my_car do |helper| %>
+
+  <p>
+    Make:
+    <%= helper.text_field :make %>
+  </p>
+  <p>
+    Model:
+    <%= helper.text_field :model %>
+  </p>
+  <p>
+    Wheels:
+    <%= helper.number_field :wheels %>
+  </p>
+
+  <%= helper.submit %>
+
+<% end %>

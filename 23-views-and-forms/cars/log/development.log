@@ -1,0 +1,501 @@
+Started GET "/" for 127.0.0.1 at 2018-04-13 10:38:28 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/daniel/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/daniel/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 152ms (Views: 7.5ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-04-13 10:38:33 -0400
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 562ms (Views: 560.2ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-04-13 10:42:52 -0400
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 36.5ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-04-13 10:46:12 -0400
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCars (20180413144448)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "make" varchar, "model" varchar, "wheels" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180413144448"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-13 14:46:26.227174"], ["updated_at", "2018-04-13 14:46:26.227174"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("make", "model", "wheels", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "Mazeratti"], ["model", "Gran Turismo"], ["wheels", 4], ["created_at", "2018-04-13 14:47:31.048607"], ["updated_at", "2018-04-13 14:47:31.048607"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("make", "model", "wheels", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "Mazda"], ["model", "3"], ["wheels", 3], ["created_at", "2018-04-13 14:47:55.327081"], ["updated_at", "2018-04-13 14:47:55.327081"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/cars" for 127.0.0.1 at 2018-04-13 10:52:28 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-04-13 10:55:34 -0400
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 10:55:42 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 10:58:47 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-04-13 10:59:09 -0400
+Processing by CarsController#create as HTML
+  Parameters: {"make"=>"Honda", "model"=>"Civic", "wheels"=>"5"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.6) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.6) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+actionpack (5.1.6) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:12:35 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:13:43 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:13:46 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:13:48 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:15:55 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:16:47 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:17:29 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-04-13 11:18:34 -0400
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n8mdXxAamdj6VEcF4ky7bWR1IUVbmIgryMhyC/XlFS+nog9/+3ED3iB3F6dj2SRmFv+wumPL3GjhsNO0fSonTw==", "make"=>"Honda", "model"=>"Civic", "wheels"=>"5", "commit"=>"Create car"}
+No template found for CarsController#create, rendering head :no_content
+Completed 204 No Content in 66ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:18:54 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:29:26 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 16.3ms)
+
+
+Started GET "/cars/" for 127.0.0.1 at 2018-04-13 11:29:34 -0400
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:29:37 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-04-13 11:29:43 -0400
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sOaprrhHg3pZNZrHmwXl/Ryn3Ae7i43+f0Bf+BeO7cCIjTuOUywZfIMWymUakHr2bi1N+IPY2b1WOP5Hn0HfoA==", "make"=>"Honda", "model"=>"Civic", "wheels"=>"5", "commit"=>"Create car"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("make", "model", "wheels", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "Honda"], ["model", "Civic"], ["wheels", 5], ["created_at", "2018-04-13 15:29:43.216333"], ["updated_at", "2018-04-13 15:29:43.216333"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for CarsController#create, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/cars/" for 127.0.0.1 at 2018-04-13 11:29:49 -0400
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:35:24 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:39:09 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 20.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:39:24 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" ORDER BY "cars"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered cars/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:39:35 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" ORDER BY "cars"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered cars/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:40:59 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-04-13 11:42:31 -0400
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x9r8L4cNQb0QNa+uHl2/hvyRT/O0sGnrNBM4TFsCs2z/sW4PbGbbu8oW/wyfyCCNjhveDIzjPagda5nz082BDA==", "car"=>{"make"=>"Benz", "model"=>"C63", "wheels"=>"1"}, "commit"=>"Create car"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-04-13 15:42:31.995525"], ["updated_at", "2018-04-13 15:42:31.995525"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+No template found for CarsController#create, rendering head :no_content
+Completed 204 No Content in 72ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/cars/" for 127.0.0.1 at 2018-04-13 11:46:05 -0400
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:46:09 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/" for 127.0.0.1 at 2018-04-13 11:46:11 -0400
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:46:18 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:46:21 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-04-13 11:46:30 -0400
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1xb6qsNg+IJWDXpiloMyX/WDWQj79fYRX7vb691oNo/vfWiKKAtihIwuKsAXFq1UhwnI98OmolJ2w3pUVacE7w==", "car"=>{"make"=>"Benz", "model"=>"C63", "wheels"=>"1"}, "commit"=>"Create car"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("make", "model", "wheels", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "Benz"], ["model", "C63"], ["wheels", 1], ["created_at", "2018-04-13 15:46:30.585167"], ["updated_at", "2018-04-13 15:46:30.585167"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for CarsController#create, rendering head :no_content
+Completed 204 No Content in 84ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/cars/" for 127.0.0.1 at 2018-04-13 11:46:33 -0400
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:49:20 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/1/edit" for 127.0.0.1 at 2018-04-13 11:54:45 -0400
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 19.6ms)
+
+
+Started GET "/cars/1/edit" for 127.0.0.1 at 2018-04-13 11:55:21 -0400
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/edit.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 9ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2: <h1>EDIT A CAR</h1>
+    3: 
+    4: <%= form_for @car do |helper| %>
+    5: 
+    6:   <p>
+    7:     Make:
+  
+app/views/cars/edit.html.erb:4:in `_app_views_cars_edit_html_erb___1622811658562179146_70366204341680'
+Started GET "/cars/1/edit" for 127.0.0.1 at 2018-04-13 11:57:46 -0400
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 16.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cars/2/edit" for 127.0.0.1 at 2018-04-13 11:57:56 -0400
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cars/2/edit" for 127.0.0.1 at 2018-04-13 11:58:17 -0400
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:58:27 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 11:58:34 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/2/edit" for 127.0.0.1 at 2018-04-13 12:03:09 -0400
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/_form.html.erb (1.5ms)
+  Rendered cars/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cars/2/edit" for 127.0.0.1 at 2018-04-13 12:03:15 -0400
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/_form.html.erb (1.5ms)
+  Rendered cars/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-04-13 12:04:15 -0400
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (1.3ms)
+  Rendered cars/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+

@@ -1,0 +1,7 @@
+INDEX PAGE
+
+<% @cars.each do |car| %>
+  <p>
+    <%= car.make %>: <%= car.model %> (wheels: <%= car.wheels %>)
+  </p>
+<% end %>

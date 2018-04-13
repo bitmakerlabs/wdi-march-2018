@@ -1,0 +1,47 @@
+
+CAR FORM
+
+<form class="" action="/cars" method="post">
+
+  <p>
+    Make:
+    <input type="text" name="make" value="">
+  </p>
+  <p>
+    Model:
+    <input type="text" name="model" value="">
+  </p>
+  <p>
+    Wheels:
+    <input type="number" name="wheels" value="">
+  </p>
+
+  <input type="submit" name="" value="Create car">
+</form>
+
+
+<br>
+
+
+<%= form_tag '/cars', method: :post do %>
+  <p>
+    Make:
+    <%= text_field_tag :make %>
+  </p>
+  <p>
+    Model:
+    <%= text_field_tag :model %>
+  </p>
+  <p>
+    Wheels:
+    <%= number_field_tag :wheels %>
+  </p>
+
+  <%= submit_tag 'Create car' %>
+
+<% end %>
+
+
+<br>
+
+<%= render 'form', my_car: @car %>
