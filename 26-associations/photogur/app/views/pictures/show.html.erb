@@ -4,6 +4,12 @@
   <p> <%= @picture.description %> </p>
   <%= image_tag @picture.url %>
 </section>
+
+<h2>Tags</h2>
+<% @picture.tags.each do |tag| %>
+  <%= tag.name %> |
+<% end %>
+
 <h2 id="comments_section">Comments</h2>
 <ul>
   <% @picture.comments.each do |comment| %>
@@ -13,3 +19,8 @@
     </li>
   <% end %>
 </ul>
+
+<%= form_for Comment.new do |f| %>
+  <%= f.text_area :message %>
+  <%= f.submit "Go!" %>
+<% end %>
