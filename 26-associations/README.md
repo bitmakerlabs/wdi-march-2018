@@ -39,3 +39,9 @@
 - other associations required
 
 - implement for comments & tags in Photogur
+
+
+### In-class code
+rails generate model Comment name:string message:text picture_id:integer
+
+
