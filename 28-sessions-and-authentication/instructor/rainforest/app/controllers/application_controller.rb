@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
 private
 
   def current_user
-    session[:user_id]
+    user_id = session[:user_id]
+    user_id && User.find(user_id)
   end
 
 end

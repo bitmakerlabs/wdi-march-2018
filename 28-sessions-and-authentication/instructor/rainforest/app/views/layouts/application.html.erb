@@ -11,7 +11,7 @@
   <body>
     <p>
     <% if current_user %>
-      Hello user#<%= current_user %>
+      Hello <%= current_user.email %>
       <%= link_to 'Logout', sessions_path, method: :delete %>
     <% else %>
       <%= link_to 'New Account', new_users_path %>
