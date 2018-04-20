@@ -6,6 +6,9 @@ class SessionsController < ApplicationController
     u = User.find_by(email: params[:session][:email])
 
     if u && u.authenticate(params[:session][:password])
+      # Put on the wristband
+      session[:user_id] = u.id
+
       # flash[:notice] = 'Login Successful'
       redirect_to root_url
     else
@@ -17,3 +20,8 @@ class SessionsController < ApplicationController
   def destroy
   end
 end
+
+# 3 Magic hashes
+# params
+# flash
+# session
