@@ -1,0 +1,14 @@
+
+submitted_email    = params[:email]
+submitted_password = params[:password]
+
+user = User.find_by(email: submitted_email)
+salt = user.password_digest[0..1]
+
+if user.password_digest[2..*] == hash(salt, submitted_password)
+  # Access Granted
+  redirect_to :dashboard
+else
+  # Access Denied
+  #re-render login page with an error
+end
