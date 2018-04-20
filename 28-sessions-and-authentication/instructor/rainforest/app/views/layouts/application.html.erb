@@ -10,14 +10,9 @@
 
   <body>
     <p>
-    <%
-    def user_is_logged_in
-      session[:user_id]
-    end
-    %>
-
-    <% if user_is_logged_in %>
-      <%= link_to 'Logout', sessions_path %>
+    <% if current_user %>
+      Hello user#<%= current_user %>
+      <%= link_to 'Logout', sessions_path, method: :delete %>
     <% else %>
       <%= link_to 'New Account', new_users_path %>
       |
