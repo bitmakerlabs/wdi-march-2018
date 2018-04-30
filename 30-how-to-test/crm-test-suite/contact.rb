@@ -19,7 +19,7 @@ class Contact
   end
 
   def self.all
-    @@contacts
+    return nil
   end
 
   def self.find(id)
