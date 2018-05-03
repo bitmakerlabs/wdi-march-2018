@@ -1,5 +1,5 @@
 class Driver
-  # Safe routine handles driving to the beach on Weekdays
+  # Safe routine handles driving to the beach on weekends.
   # Depends on: car, seatbelt
   def car_routine
     prepare_to_drive

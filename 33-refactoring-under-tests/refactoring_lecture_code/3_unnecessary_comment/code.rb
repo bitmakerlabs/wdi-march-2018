@@ -1,9 +1,8 @@
 class Driver
 
-  # car subroutine
   def car_routine
     prepare_to_drive
-    # dont drive to work on saturday or sunday
+    # Beach: Weekends, Work: Weekdays
     if day == 'Saturday' || day == 'Sunday'
       drive_to_beach
     else
@@ -11,11 +10,8 @@ class Driver
     end
   end
 
-  # preparing to drive
   def prepare_to_drive
-    # put on seatbelt
     put_on(@seatbelt)
-    # start the car
     @car.start
   end
 

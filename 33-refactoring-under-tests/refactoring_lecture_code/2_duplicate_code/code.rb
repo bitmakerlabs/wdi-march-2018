@@ -1,15 +1,17 @@
 class Driver
 
   def car_routine
+    prep_drive
     if day == 'Saturday' || day == 'Sunday'
-      put_on(@seatbelt)
-      @car.start
       drive_to_beach
     else
-      put_on(@seatbelt)
-      @car.start
       drive_to_work
     end
+  end
+
+  def prep_drive
+    put_on(@seatbelt)
+    @car.start
   end
 
 

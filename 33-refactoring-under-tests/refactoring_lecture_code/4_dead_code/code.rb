@@ -3,9 +3,6 @@ class Driver
     prepare_to_drive
     if day == 'Saturday' || day == 'Sunday'
       drive_to_beach
-    elsif false
-      # Used to go to gym on Thursdays
-      drive_to_gym
     else
       drive_to_work
     end
