@@ -7,10 +7,7 @@ class MonstersController < ApplicationController
       format.text
       format.json do
         render json: @monsters.map { |monster|
-          { full_name: monster.name,
-            location: monster.home,
-            creepiness: monster.creepiness
-          }
+           monster.to_json
         }
       end
     end
