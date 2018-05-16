@@ -1,5 +1,5 @@
 class RobotsController < ApplicationController
-
+  #layout: 'name of the layout'
   before_action :load_robot, only: %i(show)
 
   def index
@@ -9,7 +9,22 @@ class RobotsController < ApplicationController
   def show
     # We don't need to load the robot here, it's done in the load_robot method
     # @robot = Robot.find(params[:id])
+
+    puts "*"*20
+    puts params[:id]
+   
+
+    respond_to do |format|
+      format.html
+
+      format.json do
+        render json: @robot, except: %i(created_at updated_at)
+      end
+
+    end
+
   end
+
 
   private
   # load_robot and robot_params are  in the private section because they aren't
@@ -27,5 +42,7 @@ class RobotsController < ApplicationController
   def robot_params
     params.require(:robot).permit(:name, :address)
   end
+
+end
 
 end
